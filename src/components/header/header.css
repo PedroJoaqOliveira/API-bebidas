@@ -1,5 +1,54 @@
+
+
+
 header{
-    height: 100px;
+    height: 120px;
     width: 100%;
-    background-color: whitesmoke;
+    background-color: #1E1E1E;
+}
+
+.Header-total {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+
+
+}
+
+.direito-h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    list-style: none;
+    gap: 40px;
+    text-align: center;
+    text-decoration: none;
+    height: 120px;
+    text-decoration: none;
+}
+
+.esquerdo-h {
+    display: flex;
+    position: absolute;
+    text-decoration: none;
+    height: 80px;
+    margin-bottom: 3px;
+    text-align: center;
+    margin: 20px;
+    
+
+}
+
+.Img-Logo{
+    height: 50px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 100vh;
+}
+
+
+a {
+    text-decoration: none;
+    color: whitesmoke;
 }

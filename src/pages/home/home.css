@@ -82,6 +82,7 @@
     border-radius: 10px;
     margin-bottom: 10px;
     transition: 0.8s;
+    background-color: rgb(220, 219, 219);
 
 }
 
@@ -133,11 +134,68 @@ p {
 }
 
 .barra-esquerda {
-    background-color: #e9ecef;
+    background-color: #e4e3db;
     width: 200px;
 }
 
 .h1-barra {
-    background-color: #e9ecef;
+    background-color: #e4e3db;
 
+}
+
+.Bunner {
+    width: 100%;
+    height: 700px;
+}
+
+.bunner-quebra {
+    display: flex;
+    height: 100px;
+    background-color: #1E1E1E;
+    color: #e4e3db;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+
+.slogan-1-home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1100px;
+    height: 500px;
+    background-image: url('src/pages/img/bebidas Slogan .avif'); 
+    background-size: cover;
+
+}
+
+.slogan-1-home ::before {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+}
+
+.text-slogan {
+    display: grid;
+    grid-template-columns: auto ;
+    align-items: center;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.Slogan-total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-h2 {
+    font-size: 60px;
+
+}
+
+.text-p {
+    font-size: 23px;
 }

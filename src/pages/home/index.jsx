@@ -9,6 +9,8 @@ export default function Home() {
   const [vinhos, SetVinhos] = useState([]);
   const [vodkas, SetVodkas] = useState([]);
   const [incial, SetInicial] = useState([]);
+  const [nomeUrl, setUrl] = useState('vinho')
+
 
   useEffect(() => {
     async function fetchAPI() {
@@ -26,16 +28,39 @@ export default function Home() {
     fetchAPI();
   }, []);
 
+
+  function handleSelecionar(bebida) {
+    if (bebida === 'vodka') {
+      SetInicial(vodkas)
+      setUrl('vodka')
+    } else {
+      SetInicial(vinhos)
+    }
+      
+    
+
+  }
   return (
     <div>
       <Header />
+      <img className="Bunner" src="src/pages/img/LoganDrinks BR.png" alt="" />
+      <p className="bunner-quebra">Bebidas</p>
+      <div className="Slogan-total">
+      <div className="slogan-1-home">
+        <div className="text-slogan">
+        <h2 className="text-h2">NOVIDADES TODAS AS SEMANAS!</h2>
+        <p className="text-p">A Distribuidora Online está cheia de novidades para você! Agora, contamos com um catálogo ainda maior,
+         oferecendo mais variedade de produtos com preços imbatíveis. Além disso, nossa plataforma está mais rápida e intuitiva, facilitando sua experiência de compra.</p>
+        </div>
+      </div>
+      </div>
       <div className="">
         <div className="">
           <ul className="flex-center">
-            <li className="li-item" onClick={() => SetInicial(vodkas)}>
+            <li className="li-item" onClick={() => handleSelecionar('vodka')}>
             <img src="src/pages/img/VodkaAbsolut.png" alt=""/>
             </li>
-            <li className="li-item" onClick={() => SetInicial(vinhos)}>
+            <li className="li-item" onClick={() => handleSelecionar('vinho')}>
               <img src="src/pages/img/VInhoMalbac.png" alt=""/>
             </li>
           </ul>
@@ -50,7 +75,7 @@ export default function Home() {
                 <h4 className="nome-card">{element.nome}</h4>
                 <p className="discricao-card">{element.descricao}</p>
                 <h4 className="preco-card">{element.preco}</h4>
-                <button onClick={() => navigate(`/vinho/${element.id}`)}>
+                <button onClick={() => navigate(`/${nomeUrl}/${element.id}`)}>
                   {" "}
                   Comprar
                 </button>
