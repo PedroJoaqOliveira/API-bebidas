@@ -3,7 +3,9 @@ import Footer from "../../components/footer";
 import Header from "../../components/header";
 import { useNavigate, useParams } from "react-router-dom";
 import "./bebida.css";
-
+/* 
+  Melhora o estilo dessa página.
+*/
 
 export default function Vinho() {
   const navigate = useNavigate();
