@@ -10,6 +10,7 @@ export default function App() {
   return (
       <>
       <Routes>
+        {// Corrigir path para -> /home }
         <Route path="/" element={<Login/>}/>
         <Route path="/Home" element={<Home/>}/>
         <Route path="/vinho/:id" element={<Vinho/>}/>
