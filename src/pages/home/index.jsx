@@ -12,6 +12,10 @@ export default function Home() {
   const [nomeUrl, setUrl] = useState('vinho')
 
 
+  /* Criar um novo state: vai receber um valor de um input 
+    pode ser chamado de busca, setBusca.
+  */
+
   useEffect(() => {
     async function fetchAPI() {
       const url = "https://67b7932c2bddacfb270f63a5.mockapi.io/api/v1/vinhos";
@@ -43,6 +47,8 @@ export default function Home() {
   return (
     <div>
       <Header />
+      {/* Você deve criar um input, com um onChange*/}
+      {/* Você deve criar um botão, com um onClick*/}
       <img className="Bunner" src="src/pages/img/LoganDrinks BR.png" alt="" />
       <p className="bunner-quebra">Bebidas</p>
       <div className="Slogan-total">
