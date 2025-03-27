@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Home() {
   const navigate = useNavigate();
+  // Corrigir nome dos states setVinhos, setVodkas, setInicial
   const [vinhos, SetVinhos] = useState([]);
   const [vodkas, SetVodkas] = useState([]);
   const [incial, SetInicial] = useState([]);
